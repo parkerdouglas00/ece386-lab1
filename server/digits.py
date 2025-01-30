@@ -31,15 +31,17 @@ def image_to_np(image_bytes: bytes) -> np.ndarray:
     # # TODO: convert image to numpy array of shape model expects
     img = img.resize((28, 28))
     image_array = np.array(img)
-    return image_array  # image_array
+    return np.expand_dims(image_array, axis=0)  # image_array
 
 
 # TODO: Define predict POST function
 @app.post("/predict")
-def get_prediction(image: Annotated[bytes, File()]):
+def get_prediction(image: Annotated[bytes, File()]) -> int:
     processed_image = image_to_np(image)
-    tensorflow.keras.input()
-    return {"file_size": len(image)}
+    predictions = model.predict(processed_image)
+    print("************************************")
+    print(predictions)
+    return np.argmax([predictions])
 
 
 # def predict_post() -> int:
