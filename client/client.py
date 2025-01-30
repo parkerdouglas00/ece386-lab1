@@ -19,7 +19,8 @@ def main(server_ip: str, server_port: int) -> None:
     Then display the result to the user.
     """
     # TODO: Replace with prompt to user and call to get_img_prediction
-    print(f"Using server {server_ip}:{server_port}")
+    filepath = input("Image path: ")
+    get_img_prediction()
 
 
 if __name__ == "__main__":

@@ -1,3 +1,4 @@
 pillow
 tensorflow
 fastapi[standard]
+numpy
