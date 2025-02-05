@@ -1,10 +1,10 @@
 # Digits Server
 
-*Replace this line with a one-sentence explanation of what the server does.*
+The server opens the keras model, accepts a post request from the client to predict, adjust the image to meet model parameters, then runs the image through the model to make a prediction, and returns the prediction as an integer to the client.
 
 ## Usage
 
-*Replace this line with some steps of how to setup and run the server*
+Open Fast API and run the server in a virtual environment, moting that the displayed IP address is the IP address that should be passed to the client.
 
 ## Documentation:
 
