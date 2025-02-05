@@ -41,7 +41,7 @@ def get_prediction(image: Annotated[bytes, File()]) -> int:
     predictions = model.predict(processed_image)
     print("************************************")
     print(predictions)
-    return np.argmax([predictions])
+    return int(np.argmax([predictions]))
 
 
 # def predict_post() -> int:
